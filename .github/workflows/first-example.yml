@@ -15,5 +15,12 @@ jobs:
             - name: List file
               run: ls -al
 
-            - name: Read file content
-              run: cat README.md
+            - name: List and Read file
+              run: |
+                ls -al
+                cat README.md
+
+
+            - name: Generate ASCII Art
+              run: cowsay -f "Hello World!" >> ascii-art.txt
+                
