@@ -9,5 +9,11 @@ jobs:
             - name: Welcome to my first workflow
               run: echo "Hello World!"
             
+            - name: checkout repository
+              uses: actions/checkout@v7
+
+            - name: List file
+              run: ls -al
+
             - name: Read file content
-              run: cat ./README.md
+              run: cat README.md
