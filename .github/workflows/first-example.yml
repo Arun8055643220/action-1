@@ -22,5 +22,4 @@ jobs:
 
 
             - name: Generate ASCII Art
-              run: cowsay -f "Hello World!" >> ascii-art.txt
-                
+              run: cowsay -f dragon "Hello World!" >> abc.txt
