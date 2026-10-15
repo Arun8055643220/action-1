@@ -49,8 +49,5 @@ jobs:
              name: upload-artifact
              path: abc.txt
 
-         - name: Read File
-           run: cat abc.txt
-            
          - name: deploy
            run: echo "Deploying the application..."
