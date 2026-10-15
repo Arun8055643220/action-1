@@ -12,14 +12,6 @@ jobs:
             - name: checkout repository
               uses: actions/checkout@v7
 
-            - name: List file
-              run: ls -al
-
-            - name: List and Read file
-              run: |
-                ls -al
-                cat README.md
-
-
-            - name: Generate ASCII Art
-              run: cowsay -f dragon "Hello World!" >> abc.txt
+            - name: execute a script
+              run: ./ascii-script.sh
+         
