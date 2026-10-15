@@ -13,5 +13,7 @@ jobs:
               uses: actions/checkout@v7
 
             - name: execute a script
-              run: ./ascii-script.sh
+              run: |
+                chmod +x .github/workflows/ascii-script.sh
+                .github/workflows/ascii-script.sh
          
