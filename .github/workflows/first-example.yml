@@ -17,7 +17,8 @@ jobs:
               run: sleep 30
 
     test-job:
-        runs-on: ubuntu-lastest
+        needs: build__job
+        runs-on: ubuntu-latest
         steps:
             - name: sleep for 10 seconds
               run: sleep 10
@@ -30,6 +31,7 @@ jobs:
                   echo "File does not exist."
                 fi
     deploy-job:
+        needs: test-job
         runs-on: ubuntu-latest
         steps:
             - name: Read File
