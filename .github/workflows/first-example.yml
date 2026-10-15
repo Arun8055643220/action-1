@@ -14,7 +14,7 @@ jobs:
               run: cowsay "Hello from my second workflow!" >> abc.txt
 
             - name: upload artifact
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v7
               with:
                 name: upload-artifact
                 path: abc.txt
@@ -34,7 +34,7 @@ jobs:
                   echo "File does not exist."
                 fi
             - name: download artifact
-              uses: actions/download-artifact@v3
+              uses: actions/download-artifact@v7
               with:
                 name: upload-artifact
                 path: abc.txt
@@ -44,7 +44,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
          - name: download artifact
-           uses: actions/download-artifact@v3
+           uses: actions/download-artifact@v7
            with:
              name: upload-artifact
              path: abc.txt
